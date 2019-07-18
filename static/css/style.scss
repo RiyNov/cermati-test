@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    background-image: url("../img/work-desk__dustin-lee.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.notif{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #e5e5e5;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;    
+    p {
+        width: 660px;
+        margin-right: 10px;
+    }
+    button {
+        border: none;
+        height: 40px;
+        width: 60px;
+        background: #007bc1;
+        color: #e5e5e5;
+    }
+}
+
+.header {
+    background: #004a75;
+    opacity: 0.8;
+    color: #e5e5e5;
+    height: 100vh;
+    &_logo {
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    &_detail {
+        text-align: center;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        h1 {
+            margin: 15px auto;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+        h2 {
+            margin: 0;
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+        &_button {
+            padding: 20px;
+            background: none;
+            border: solid #e5e5e5 3px;
+            color: #e5e5e5;
+            font-weight: bold;
+        }
+        &_button:hover {
+            background: #e5e5e5;
+            color: #004a75;
+        }
+    }
+}
+
+.highlight {
+    background: #e5e5e5;
+    text-align: center;
+    padding: 45px 0;
+    &_title {
+        text-align: center;
+        margin-bottom: 30px;
+        h2 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        p {
+            text-align: center;
+            max-width: 595px;
+            margin: auto;
+            font-size: 18px;
+        }
+    }
+    &_list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &_item {
+            text-align: start;
+            padding: 20px;
+            margin: 20px 1%;
+            border: solid 2px darkgray;
+            max-width: 25%;
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.footer {
+    background: #004a75; 
+    color: whitesmoke;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.news {
+    margin: 0;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    background: #007bc1;
+    color: #e5e5e5;
+    max-width: 640px;
+    opacity: 0.9;
+    span {
+        position: absolute;
+        right: 15px;
+        cursor: context-menu;
+    }
+    input {
+        border: none;
+        padding: 10px;
+        width: 485px;
+        margin-right: 5px;
+    }
+    button {
+        border: none;
+        background: #ff8000;
+        color: #e5e5e5;
+        font-weight: bold;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .header {
+        &_logo {
+            width: 65px;
+            height: 65px;
+        }
+        &_detail {
+            width: 90%;
+        }
+    }
+
+    .highlight {
+        &_title {
+            margin-bottom: 20px;
+            P {
+                max-width: 60%;
+            }
+        }
+        &_list {
+            &_item {
+                max-width: 40%;
+            }
+        }
+    }
+
+    .notif {
+        p {
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    .header {
+        &_detail {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 35px;
+            }
+        }
+    }
+
+    .highlight {
+        &_list {
+            &_item {
+                max-width: 35%;
+            }
+        }
+    }
+
+    .news {
+        input {
+            width: -webkit-fill-available;;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        button {
+            width: -webkit-fill-available;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        &_logo {
+            width: 50px;
+            height: 50px;
+        }
+        &_detail {
+            width: 70%;
+            h1 {
+                font-size: 30px;
+                margin: 5px 0;
+            }
+            h2 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .highlight {
+        &_list_item {
+            max-width: 80%;
+        }
+        &_title {
+            margin-bottom: 0;
+            p {
+                max-width: 90%;
+            }
+        }
+    }   
+
+    .notif {
+        display: block;
+        p {
+            margin: 0px;
+            padding: 10px;
+            padding-bottom: 0;
+            width: 95%;
+        }
+        button {
+            margin: 10px;
+        }
+    }
+    
+    .news {
+        input {
+            width: -webkit-fill-available;;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        button {
+            width: -webkit-fill-available;
+        }
+    }
+}
